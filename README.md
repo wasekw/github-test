@@ -46,3 +46,22 @@ $ git config --global alias.gl 'config --global -l'
 $ git config --global alias.se '!git rev-list --all | xargs git grep -F'
 
 cat .git/ORIG_HEAD
+
+git checkout -B master fix == git merge
+
+git branch -d fix - удаляєм гілку fix
+На самому ділі ми видалили лише ссилку на гілку fix
+
+git branch -D feature - так ми знищуємо гілку і усі комміти що належать цієй гілці, але знищуємо не зразу якщо хочемо відновити гілку то
+
+git branch feature 72861a2
+
+REFERENCE LOG -ФАЙЛ ССИЛОК
+
+cat .git/logs/HEAD - просмотр файла ССИЛОК HEAD
+
+git reflog - виведе значення рефлогів для HEAD
+
+git reflog master - виведе значення рефлогів для master .....
+
+git branch fix HEAD@{8}
