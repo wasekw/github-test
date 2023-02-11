@@ -65,3 +65,26 @@ git reflog - виведе значення рефлогів для HEAD
 git reflog master - виведе значення рефлогів для master .....
 
 git branch fix HEAD@{8}
+
+git reflog === git log --oneline - g
+
+git reflog --date=iso
+
+git branch fix HEAD@{"2023-02-11 10:34:59 +0200"} -можна вставляти дату але тільки у кавичках бо є пробіли
+
+gc reflogExpire='90 days ago' 90 днів зберігається рефлог, або всього 30 днів якщо гілка знищена
+
+git checkout @{-1} - поверне на гілку на якій ми були до цього, або git checkout -
+
+git checkout -f - поверне HEAD на останній коммит і зробе зброс INDEX
+git checkout -f index.html - поверне тільки файл index.html на стан останнього коммиту
+git reset --hard - поверне HEAD на останній коммит і зробе зброс INDEX
+
+git clean -dxf удаляєм (-d) не тільки файли але і директорії, (х) -щоб удаляло файли що ігноруються через gitignore, (f) - force бо не буде працювати
+
+$ gti reset --soft @~
+git add index.html
+git commit -c ORIG_HEAD
+
+git reste --keep -???
+git commit -c ORIG_HEAD
