@@ -29,6 +29,10 @@ git branch -f master a43102a - передвинути гілку master на к�
 
 Перед командою merge git записує останній ідентифікатор master в .git/ORIG_HEAD
 
+git branch -f master ORIG_HEAD - поверне master назад
+а тепер переключимо на master HEAD
+git checkout master
+
 $ git config --global alias.p 'push'
 $ git config --global -l
 $ git config --global alias.st 'status -sb'
