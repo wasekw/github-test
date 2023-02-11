@@ -17,3 +17,5 @@ git add -p index.html
 git checkout --force HEAD
 
 git checkout -f HEAD
+
+cat ~/.gitconfig - просмотр в редакторе локального файла .gitcnfig
