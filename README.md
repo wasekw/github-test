@@ -13,3 +13,7 @@ $ git show --pretty=fuller
 $ git add -f .idea/project.html
 
 git add -p index.html
+
+git checkout --force HEAD
+
+git checkout -f HEAD
