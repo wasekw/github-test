@@ -98,3 +98,15 @@ git show --quiet ORIG_HEAD
 
 git commit -C ORIG_HEAD --reset-author
 git commit --amend
+git commit --amend --no-edit
+
+git diff <commit1> <commit2> - показує різницю між двома коммітами
+
+git diff master fix
+git diff maste..fix
+
+$ git diff master...fix
+
+git diff HEAD
+
+git config --global commit.verbose true
