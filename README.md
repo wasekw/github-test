@@ -88,3 +88,13 @@ git commit -c ORIG_HEAD
 
 git reste --keep -???
 git commit -c ORIG_HEAD
+
+git show --quiet ORIG_HEAD
+
+<!-- .....ФЛАГИ  -->
+
+--pretty=fuller - щоб побачити повну інфу
+--reset-author - переписати автора
+
+git commit -C ORIG_HEAD --reset-author
+git commit --amend
