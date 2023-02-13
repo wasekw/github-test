@@ -110,3 +110,13 @@ $ git diff master...fix
 git diff HEAD
 
 git config --global commit.verbose true
+
+$ git log --pretty=format:'%h %cd | %s %d [%an]'
+
+$ git log --pretty=format:'%C(yellow)%h %C(green)%ad | %C(#630f71)%s %d' --date=format:'%F %R'
+
+git config --global pretty.my format:'%C(yellow)%h %C(green)%ad | %C(#630f71)%s %d' --date=format:'%F %R'
+$ git log --pretty=my - так визиваємо нашу скорочену log
+git config --global format.pretty my скорочуєм виклик log
+
+git config --global log.date format-local:'%F %R' скорочуєм у лозі формат дати
