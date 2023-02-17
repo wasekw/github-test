@@ -120,3 +120,31 @@ $ git log --pretty=my - так визиваємо нашу скорочену lo
 git config --global format.pretty my скорочуєм виклик log
 
 git config --global log.date format-local:'%F %R' скорочуєм у лозі формат дати
+
+//==============================================================================================//
+
+$ git log fix --graph
+$ git log fix ^master
+$ git log ..fix = (якщо HEAD вказуэ на master) git log master..fix
+$ git log ./css/styles.css - показує в яких комітах були зміни в цьому файлі
+$ git log --all --graph
+
+- e041ee0 2023-02-13 12:17 | Merge branch master (HEAD -> master, origin/master)
+  |\
+  | \* 894a838 2023-02-11 12:23 | Testing deleted trash and work with reset
+- | d76ec6e 2023-02-13 12:13 | Added config log
+- | eb13479 2023-02-11 15:05 | git diff other
+- | 40dee01 2023-02-11 14:21 | Work with amend
+- | 90f4725 2023-02-11 12:23 | Testing deleted trash and work with reset plus --amend
+  |/
+- 436f8e3 2023-02-11 11:25 | Added reflog
+- 72861a2 2023-02-11 10:45 | switched between branches
+- 1c7d402 2023-02-11 10:34 | Added readme some alias (fix)
+- 0cee8eb 2023-02-11 10:21 | new branch fix
+- 4c91348 2023-02-11 10:04 | Added readme.md + 3
+- cbc7f7e 2023-02-11 09:52 | Added readme.md
+- a679960 2023-02-10 14:53 | Added add -p
+
+//==============================================================================//
+$ git log --grep readmy
+git blame index.html
