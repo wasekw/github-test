@@ -148,3 +148,11 @@ $ git log --all --graph
 //==============================================================================//
 $ git log --grep readmy
 git blame index.html
+
+//===================================================================================//
+
+$ git diff --name-only master fix
+README.md
+
+$ git merge-base master fix
+1c7d402f5c4787a136d898bce4c293e53c439e85
