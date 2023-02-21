@@ -156,3 +156,109 @@ README.md
 
 $ git merge-base master fix
 1c7d402f5c4787a136d898bce4c293e53c439e85
+
+//============================================================================================
+
+git config --system core.safecrlf warn - он выдаст предупреждение, но не отменит операцию как Git будет обрабатывать окончания строк в текстовых файлах
+
+git config --system core.quotepath off - По умолчанию символы, которые не относятся к таблице ASCII, будут отображаться в виде восьмеричной последовательности, а также в формате Quoted String, то есть в кавычках. Убирает проблеми з відтворенням кі
+
+C:\Users\user>git config --list --global
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+user.email=vasiliy.volobaev@gmail.com
+user.name=Vasiliy Volobaev
+alias.hist=log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+alias.co=checkout
+alias.ca=commit -am
+alias.st=status
+alias.br=branch
+alias.type=cat-file -t
+alias.dump=cat-file -p
+alias.s=status --short
+alias.a=add .
+alias.cg=config
+core.editor=vim --nofork
+commit.verbose=true
+pretty.my=format:%C(yellow)%h %C(green)%ad | %C(#630f71)%s %d
+format.pretty=my
+log.date=format-local:%F %R
+
+C:\Users\user>git config --list --system
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=true
+core.usebuiltinfsmonitor=true
+core.safecrlf=warn
+core.quotepath=off
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+
+git config --list --global --show-origin
+
+//=======================================================================================================//
+
+git remote add origin
+Эта команда добавляет удалённый репозиторий с названием origin. Обязательно ли должно быть название origin? Нет, оно может быть любым, но origin — уже устоявшееся название, которое можно перевести как «источник».
+
+$ git remote
+origin
+
+git remote get-url origin для отримання url адреси origin
+git remote -v
+
+git remote add academy url-адрес
+
+git remote set-url --add origin url-адрес - В итоге можем отправлять изменения на второй удалённый репозиторий, используя не только локальный псевдоним academy, но теперь ещё и origin
+
+git remote remove academy - Этой командой мы говорим: «Удали локальный псевдоним academy и связь с удалённым репозиторием»
+
+git remote set-url --delete origin url-адрес - удалим данный репозиторий из origin
+
+git remote set-url origin url-адрес - И вы хотите обновить URL-адрес, но так, чтобы при этом не удалять локальный псевдоним и потом снова его устанавливать тільки після видалення віддаленого репозиторія
+
+git remote rename origin academy - Теперь переименуем origin в academy
+
+//=========================================================================================================//
+
+git status есть опция --short, или сокращённо -s, которая выводит информацию о статусах файлов в укороченном формате
+
+Вторая команда для добавления файлов — git add :/. Ей неважно, в какой директории вы находитесь, она добавит в индекс все файлы
+
+git add -A (более развёрнуто git add --all) or git add --no-ignore-removal точно так же добавляют все файлы в индекс, независимо от того, в какой директории вы находитесь
+
+если вам нужно добавить все файлы только определённой директории в индекс, то можете воспользоваться командой git add название-директории/. Например: git add source/
+
+$ git log --oneline
+89a84d9 (HEAD -> master) Added two files
+
+$ git log --stat
+89a84d9 2023-02-21 16:48 | Added two files (HEAD -> master)
+index.html | 10 ++++++++++
+learning/text.txt | 1 +
+2 files changed, 11 insertions(+)
+
+--shortstat — уменьшенная версия опции --stat. Она выводит только общее количество изменённых файлов и количество изменённых строк. На наш взгляд, опция --stat полезнее,
+
+--name-only — выводит то же самое, что и команда git log, а также дополнительно список изменённых файлов.
+
+--name-status — улучшенная версия --name-only. Выводит названия изменённых файлов и статус, который у них был на момент коммита. Позволяет отследить, какие файлы были добавлены или удалены.
+
+--abbrev-commit — выводит то же самое, что и команда git log, но вместо длинного хэша будет короткий, как при использовании опции --oneline
+
+--relative-date— выводит то же самое, что и команда git log, только показывает дату в относительном формате,
+
+-p — позволяет посмотреть не только то, что выводит обычная команда git log, но ещё и показывает, какие конкретно изменения были сделаны в каждом коммите.
+
+Сначала ставится -, а после без пробела пишется цифра. Цифра указывает, какое количество последних коммитов нужно отобразить. У неё точно такой же вывод, как и у команды git log
