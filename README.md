@@ -322,3 +322,4 @@ git config --system init.defaultBranch master - командa для измен�
 git branch develop - создадим новую ветку с названием develop
 git checkout -b develop - Чтобы создать новую ветку и сразу на неё переключиться, нужно воспользоваться командой
 git switch --create develop -
+git push --set-upstream origin develop
