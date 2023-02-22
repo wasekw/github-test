@@ -360,3 +360,7 @@ git branch --delete --force <название-ветки>.
 git log --oneline --no-decorate. Опция --no-decorate убирает названия веток, на которых присутствуют коммиты, а также указатели.
 
 git push --all - команда отправляет изменения со всех существующих веток,
+
+По умолчанию, если не использовать опцию -m, Git сам напишет коммит в стиле Merging with develop. Нас это не устраивает, поэтому мы будем использовать опцию -m, чтобы самостоятельно написать коммит.
+
+git merge --no-ff develop -m "feat: the develop branch is merged into the main branch"
