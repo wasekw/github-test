@@ -8,3 +8,16 @@ h1 {
   color: red;
   background-color: gold;
 }
+
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #676767;
+  background-color: #202020;
+}
+
+h2:hover {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aqua;
+  background-color: crimson;
+}
+
