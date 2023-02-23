@@ -369,4 +369,7 @@ git merge --no-ff develop -m "feat: the develop branch is merged into the main b
 
 Пропишем команду из ветки main — git branch --delete develop
 Теперь удалим ветку в удалённом репозитории с помощью команды git push --delete origin develop
+
 опция --squash. Она позволяет сжать коммиты и создать из них один.
+
+Объединим ветки с использованием режима no-fast-forward. Воспользуемся командой git merge feature --no-ff --message "feat: the feature branch merges into the main branch"
