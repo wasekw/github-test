@@ -10,7 +10,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #676767;
   background-color: #202020;
 }
@@ -21,3 +21,21 @@ h2:hover {
   background-color: crimson;
 }
 
+button {
+  margin: 0 auto;
+  padding: 16x 20px;
+  display: block;
+  width: 100px;
+  height: 80px;
+  border-radius: 12px;
+  background-color: #ff00ff;
+  color: greenyellow;
+  text-align: center;
+  font-size: 24px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+button:hover {
+  background-color: darkorange;
+  color: darkblue;
+}
