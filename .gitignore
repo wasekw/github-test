@@ -1,0 +1,4 @@
+# My configuration file .gitignore
+database.sql
+*.sql
+portfolio.html
